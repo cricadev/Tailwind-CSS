@@ -2,75 +2,28 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="../dist/output.css" />
-    <title>Tailwind</title>
+    <title>Prime properties</title>
   </head>
   <body>
-    <!--  flexbox
-       <div class="flex bg-yellow-500 w-auto">
-      <div class="order-2 h-10 w-80 bg-red-500">1</div>
-      <div class="order-1 h-10 w-80 bg-blue-500">2</div>
-      <div class="order-3 h-10 w-80 bg-green-500">3</div>
-    </div> -->
-    <!-- GRID
-       <div
-      class="bg-yellow-500 w-auto grid grid-cols-5 grid-flow-row gap-x-4 gap-y-2 justify-items-start"
-    >
-      <div class="h-20 w-20 bg-red-500 justify-self-end">1</div>
-      <div class="h-20 w-20 bg-red-500">2</div>
-      <div class="h-20 w-20 bg-red-500">3</div>
-      <div class="h-20 w-20 bg-red-500">4</div>
-      <div class="h-20 bg-red-500 justify-self-stretch">5</div>
-      <div class="h-20 w-20 bg-red-500">6</div>
-      <div class="h-20 w-20 bg-red-500">7</div>
-      <div class="h-20 w-20 bg-red-500">8</div>
-      <div class="h-20 w-20 bg-red-500">9</div>
-    </div> -->
-    <!-- MARGIN AND PADDING 
-      <div class="bg-blue-500 m-10 p-10 pb-20">
-      <div class="bg-red-500 p-10 pl-20">This is the inner div</div>
-    </div> -->
-    <!--  TEXT 
-      <div
-      class="text-4xl font-semibold text-center text-yellow-500 text-opacity-50 bg-blue-500"
-    >
-      This is a heading
-    </div> -->
-    <!--  BORDER && SHADOWS 
-      <button
-      class="bg-white-500 m-20 p-10 text-black-500 rounded-b-md border-8 border-yellow-500 border-opacity-80 border-dashed shadow-xl"
-    >
-      Click here
-    </button> -->
-
-    <!-- BREAKPOINTS
-       <h1
-      class="text-5xl text-pink-500 font-extrabold 2xl:text-red-500 xl:text-yellow-500 lg:text-blue-500 md:text-green-500 sm:text-purple-500 text-center"
-    >
-      Heading
-    </h1> -->
-    <!-- PSEUDO SELECTORS 
-      <button class="bg-yellow-500 hover:bg-blue-500 hover:text-white">
-      Click
-    </button>
-    <input
-      type="text"
-      placeholder="Add name"
-      class="bg-gray-200 focus:bg-green-500"
-    />
-    <div class="group bg-red-500">
-      <p class="group-hover:text-white">para 1</p>
-      <p class="group-hover:text-white">para 2</p>
-    </div> -->
-    <!-- LAYER & APPLY DIRECTIVEE 
-      <a href="">Click here</a> -->
-
-    <!-- COMPONENTS 
-      <button class="menu-button">Click</button>
-    <button class="menu-button">Exit</button>
-    <button class="menu-button">open</button> -->
-    <!--utility classes
-       <h1 class="text-green-500">heading</h1> -->
-    <button class="menu-button">ola</button>
-    <h2>olaa</h2>
+    <nav class="bg-white shadow-lg">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+          <div class="flex space-x-7">
+            <a class="flex item-center py-4 px-2" href="#">
+              <img class="h-8 w-8 mr-2" src="../dist/images/house.png" alt="" />
+              <span class="font-semibold text-gray-500 text-lg">
+                Prime Properties
+              </span>
+            </a>
+          </div>
+          <div class="flex space-x-1">
+            <a href="">Home</a>
+            <a href="">Service</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
   </body>
 </html>

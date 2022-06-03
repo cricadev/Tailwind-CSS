@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LAYER & APPLY DIRECTIVES 
+
+@layer base {
+  a {
+    @apply text-green-500 underline;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+}
+ */
+/* 
+ COMPONENTS 
+@layer components {
+  .menu-button {
+    @apply text-white bg-indigo-500 p-3;
+  }
+}
+.menu-button {
+  @apply text-white bg-green-500 rounded;
+}
+
+*/
+
+/*  utility classes
+
+@layer utilities {
+  .text-green-500 {
+    color: blue;
+  }
+} */
