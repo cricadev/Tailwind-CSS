@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../dist/output.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
     <title>Dashboard</title>
   </head>
   <body class="bg-gray-200">
@@ -19,16 +20,491 @@
         <div class="">
           <div class="p-5 text-xs font-bold text-gray-200 uppercase">pages</div>
         </div>
+        <div class="flex m-5 mt-2">
+          <div class="">
+            <img src="../dist/images/dashboard.png" alt="" class="w-5 h-5" />
+          </div>
+          <div class="mx-3 text-sm text-gray-100 capitalize">Dashboard</div>
+        </div>
+        <div class="flex m-5 mt-2">
+          <div class="">
+            <img src="../dist/images/customers.png" alt="" class="w-5 h-5" />
+          </div>
+          <div class="mx-3 text-sm text-gray-100 capitalize">customers</div>
+        </div>
+        <div class="flex m-5 mt-2">
+          <div class="">
+            <img src="../dist/images/orders.png" alt="" class="w-5 h-5" />
+          </div>
+          <div class="mx-3 text-sm text-gray-100 capitalize">orders</div>
+        </div>
+        <div class="flex m-5 mt-2">
+          <div class="">
+            <img src="../dist/images/campaign.png" alt="" class="w-5 h-5" />
+          </div>
+          <div class="mx-3 text-sm text-gray-100 capitalize">campaign</div>
+        </div>
+        <div class="flex m-5 mt-2">
+          <div class="">
+            <img src="../dist/images/messages.png" alt="" class="w-5 h-5" />
+          </div>
+          <div class="mx-3 text-sm text-gray-100 capitalize">messages</div>
+        </div>
+        <div class="flex m-5 mt-2">
+          <div class="">
+            <img src="../dist/images/apps.png" alt="" class="w-5 h-5" />
+          </div>
+          <div class="mx-3 text-sm text-gray-100 capitalize">apps</div>
+        </div>
+        <div class="flex m-5 mt-2">
+          <div class="">
+            <img src="../dist/images/settings.png" alt="" class="w-5 h-5" />
+          </div>
+          <div class="mx-3 text-sm text-gray-100 capitalize">settings</div>
+        </div>
       </div>
       <!--Side Navbar-->
       <!--Main Area-->
-      <div class="flex">
+      <div class="flex-1">
+        <!--Top Navbar-->
         <div class="">
-          <img src="" alt="" />
+          <div class="bg-white px-2 py-0.5 h-18 flex">
+            <div class="flex items-center p-3 left md:w-3/4 sm:w-1/3">
+              <img class="w-10 h-10" src="../dist/images/person.png" alt="" />
+              <span class="block ml-4">Ashutosh Pawar</span>
+            </div>
+            <div class="flex right md:w-1/4 sm:2/3">
+              <img
+                class="p-1 mx-2 my-4 bg-gray-100 rounded-full w-7 h-7"
+                src="../dist/images/search.png"
+                alt=""
+              />
+              <img
+                class="p-1 mx-2 my-4 bg-gray-100 rounded-full w-7 h-7"
+                src="../dist/images/message.png"
+                alt=""
+              />
+              <img
+                class="p-1 mx-2 my-4 bg-gray-100 rounded-full w-7 h-7"
+                src="../dist/images/warning.png"
+                alt=""
+              />
+              <a href="" class="mx-2 mt-4 text-indigo-500">Log out</a>
+            </div>
+          </div>
         </div>
-        <div class="">Dashboard</div>
+        <!--site banner-->
+        <div class="p-6 bg-indigo-200 m-7">
+          <div class="text-4xl font-semibold text-gray-800">
+            Good Morning, Super Inc. 🤞
+          </div>
+          <div class="mt-4">There are stats for today, have a good day.</div>
+        </div>
+        <!--site banner-->
+        <div class="flex space-x-6 card-container m-7">
+          <div class="w-1/2 p-4 bg-white">
+            <div class="">
+              <img class="w-10 h-10" src="../dist/images/wallet.png" alt="" />
+            </div>
+            <div class="text-xl font-bold text-gray-700 lowercase">
+              Super plus
+            </div>
+            <div class="my-3 text-sm font-bold text-gray-400 uppercase">
+              sales
+            </div>
+            <span class="text-3xl font-bold">$25,647</span
+            ><span
+              class="p-0.5 text-xs font-bold text-white align-text-top bg-green-500 rounded-full"
+              >+58%</span
+            >
+            <canvas id="myChart1" width="400" height="400"></canvas>
+          </div>
+          <div class="w-1/2 p-4 bg-white">
+            <div class="">
+              <img class="w-10 h-10" src="../dist/images/wallet.png" alt="" />
+            </div>
+            <div class="text-xl font-bold text-gray-700 lowercase">
+              Super plus
+            </div>
+            <div class="my-3 text-sm font-bold text-gray-400 uppercase">
+              sales
+            </div>
+            <span class="text-3xl font-bold">$24,237</span
+            ><span
+              class="p-0.5 text-xs font-bold text-white align-text-top bg-red-500 rounded-full"
+              >-9%</span
+            >
+            <canvas id="myChart2" width="400" height="400"></canvas>
+          </div>
+        </div>
+        <div class="flex space-x-6 card-container m-7">
+          <div class="w-1/2 p-4 bg-white">
+            <div class="">
+              <img class="w-10 h-10" src="../dist/images/wallet.png" alt="" />
+            </div>
+            <div class="text-xl font-bold text-gray-700 lowercase">
+              Super plus
+            </div>
+            <div class="my-3 text-sm font-bold text-gray-400 uppercase">
+              sales
+            </div>
+            <span class="text-3xl font-bold">$25,647</span
+            ><span
+              class="p-0.5 text-xs font-bold text-white align-text-top bg-green-500 rounded-full"
+              >+58%</span
+            >
+            <canvas id="myChart3" width="400" height="400"></canvas>
+          </div>
+          <div class="w-1/2 p-4 bg-white">
+            <div class="">
+              <img class="w-10 h-10" src="../dist/images/wallet.png" alt="" />
+            </div>
+            <div class="text-xl font-bold text-gray-700 lowercase">
+              Super plus
+            </div>
+            <div class="my-3 text-sm font-bold text-gray-400 uppercase">
+              sales
+            </div>
+            <span class="text-3xl font-bold">$24,237</span
+            ><span
+              class="p-0.5 text-xs font-bold text-white align-text-top bg-red-500 rounded-full"
+              >-9%</span
+            >
+            <canvas id="myChart4" width="400" height="400"></canvas>
+          </div>
+        </div>
+        <div class="flex space-x-6 card-container m-7">
+          <div class="w-1/3 p-4 bg-white divide-y divide-gray-200">
+            <div class="pb-4 font-bold text-l">Top countries</div>
+            <canvas id="myChart5" width="400" height="400"></canvas>
+          </div>
+          <div class="w-2/3 p-4 bg-white divide-y divide-gray-200">
+            <div class="pb-4 font-bold text-l">Top Channels</div>
+            <div
+              class="flex p-2 text-xs font-bold text-gray-400 uppercase bg-gray-100"
+            >
+              <div class="w-1/3">
+                <div>Source</div>
+              </div>
+              <div class="flex w-3/4 space-x-14">
+                <div>Visitors</div>
+                <div>Revenues</div>
+                <div>Sales</div>
+                <div>Conversion</div>
+              </div>
+            </div>
+            <div class="divide-y divide-gray-200 multi-channel-container">
+              <div class="pt-2 pb-2 single-channel">
+                <div class="flex">
+                  <div class="w-1/3">
+                    <div class="flex items-center image-text">
+                      <div class="">
+                        <img
+                          class="w-8 h-8"
+                          src="../dist/images/youtube.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="pt-1 pl-2 font-semibold">YouTube</div>
+                    </div>
+                  </div>
+                  <div class="flex w-3/4 space-x-16">
+                    <div class="">2.4k</div>
+                    <div class="text-green-500">$16,000</div>
+                    <div class="">340</div>
+                    <div class="text-blue-500">4.94%</div>
+                  </div>
+                </div>          <div class="pt-2 pb-2 single-channel">
+                  <div class="flex">
+                    <div class="w-1/3">
+                      <div class="flex items-center image-text">
+                        <div class="">
+                          <img
+                            class="w-8 h-8"
+                            src="../dist/images/facebook.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="pt-1 pl-2 font-semibold">Facebook</div>
+                      </div>
+                    </div>
+                    <div class="flex w-3/4 space-x-16">
+                      <div class="">2.4k</div>
+                      <div class="text-green-500">$16,000</div>
+                      <div class="">340</div>
+                      <div class="text-blue-500">4.94%</div>
+                    </div>
+                  </div>          <div class="pt-2 pb-2 single-channel">
+                    <div class="flex">
+                      <div class="w-1/3">
+                        <div class="flex items-center image-text">
+                          <div class="">
+                            <img
+                              class="w-8 h-8"
+                              src="../dist/images/instagram.png"
+                              alt=""
+                            />
+                          </div>
+                          <div class="pt-1 pl-2 font-semibold">instagram</div>
+                        </div>
+                      </div>
+                      <div class="flex w-3/4 space-x-16">
+                        <div class="">2.4k</div>
+                        <div class="text-green-500">$16,000</div>
+                        <div class="">340</div>
+                        <div class="text-blue-500">4.94%</div>
+                      </div>
+                    </div>          <div class="pt-2 pb-2 single-channel">
+                      <div class="flex">
+                        <div class="w-1/3">
+                          <div class="flex items-center image-text">
+                            <div class="">
+                              <img
+                                class="w-8 h-8"
+                                src="../dist/images/github.png"
+                                alt=""
+                              />
+                            </div>
+                            <div class="pt-1 pl-2 font-semibold">github</div>
+                          </div>
+                        </div>
+                        <div class="flex w-3/4 space-x-16">
+                          <div class="">2.4k</div>
+                          <div class="text-green-500">$16,000</div>
+                          <div class="">340</div>
+                          <div class="text-blue-500">4.94%</div>
+                        </div>
+                      </div>          <div class="pt-2 pb-2 single-channel">
+                        <div class="flex">
+                          <div class="w-1/3">
+                            <div class="flex items-center image-text">
+                              <div class="">
+                                <img
+                                  class="w-8 h-8"
+                                  src="../dist/images/facebook.png"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="pt-1 pl-2 font-semibold">facebook</div>
+                            </div>
+                          </div>
+                          <div class="flex w-3/4 space-x-16">
+                            <div class="">2.4k</div>
+                            <div class="text-green-500">$16,000</div>
+                            <div class="">340</div>
+                            <div class="text-blue-500">4.94%</div>
+                          </div>
+                        </div>          <div class="pt-2 pb-2 single-channel">
+                          <div class="flex">
+                            <div class="w-1/3">
+                              <div class="flex items-center image-text">
+                                <div class="">
+                                  <img
+                                    class="w-8 h-8"
+                                    src="../dist/images/github.png"
+                                    alt=""
+                                  />
+                                </div>
+                                <div class="pt-1 pl-2 font-semibold">github</div>
+                              </div>
+                            </div>
+                            <div class="flex w-3/4 space-x-16">
+                              <div class="">2.4k</div>
+                              <div class="text-green-500">$16,000</div>
+                              <div class="">340</div>
+                              <div class="text-blue-500">4.94%</div>
+                            </div>
+                          </div>
+              </div>
+            </div>
+            <!--Main Area-->
+          </div>
+        </div>
       </div>
-      <!--Main Area-->
     </div>
   </body>
+  <script>
+    const ctx1 = document.getElementById("myChart1").getContext("2d");
+    const ctx2 = document.getElementById("myChart2").getContext("2d");
+    const ctx3 = document.getElementById("myChart3").getContext("2d");
+    const ctx4 = document.getElementById("myChart4").getContext("2d");
+    const ctx5 = document.getElementById("myChart5").getContext("2d");
+
+    const myChart = new Chart(ctx1, {
+      type: "bar",
+      data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        datasets: [
+          {
+            label: "# of Sales",
+            data: [1, 2, 3, 4, 5, 7],
+            backgroundColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+    const myChart2 = new Chart(ctx2, {
+      type: "line",
+      data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        datasets: [
+          {
+            label: "# of Sales",
+            data: [10, 25, 15, 104, 115, 100],
+            backgroundColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+    const myChart3 = new Chart(ctx3, {
+      type: "doughnut",
+      data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        datasets: [
+          {
+            label: "# of Sales",
+            data: [10, 25, 15, 104, 115, 100],
+            backgroundColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+    const myChart4 = new Chart(ctx4, {
+      type: "radar",
+      data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        datasets: [
+          {
+            label: "# of Sales",
+            data: [10, 25, 15, 104, 115, 100],
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255,0.21)",
+              "rgba(255, 159, 64, 0.2)",
+            ],
+            borderColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+    const myChart5 = new Chart(ctx5, {
+      type: "doughnut",
+      data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        datasets: [
+          {
+            label: "# of Sales",
+            data: [10, 25, 15, 104, 115, 100],
+            backgroundColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        scales: {},
+      },
+    });
+  </script>
 </html>
